@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="urn:mpeg:dash:schema:mpd:2011"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd"
+	profiles="urn:mpeg:dash:profile:isoff-live:2011"
+	type="static"
+	mediaPresentationDuration="PT1M33.0S"
+	maxSegmentDuration="PT5.0S"
+	minBufferTime="PT18.7S">
+	<ProgramInformation>
+	</ProgramInformation>
+	<ServiceDescription id="0">
+	</ServiceDescription>
+	<Period id="0" start="PT0.0S">
+		<AdaptationSet id="0" contentType="video" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" frameRate="24000/1001" maxWidth="1920" maxHeight="1080" par="16:9">
+			<Representation id="0" mimeType="video/mp4" codecs="av01.0.08M.10" bandwidth="4829698" width="1920" height="1080" scanType="unknown" sar="1:1">
+				<SegmentTemplate timescale="16000" initialization="init-stream$RepresentationID$.m4s" media="chunk-stream$RepresentationID$-$Number%05d$.m4s" startNumber="1">
+					<SegmentTimeline>
+						<S t="112" d="160144" />
+						<S d="160160" />
+						<S d="102112" />
+						<S d="97424" />
+						<S d="120784" />
+						<S d="98768" />
+						<S d="80080" />
+						<S d="140816" />
+						<S d="105440" />
+						<S d="84080" />
+						<S d="85408" />
+						<S d="150160" />
+						<S d="104096" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="1" contentType="audio" startWithSAP="1" segmentAlignment="true" bitstreamSwitching="true" lang="jpn">
+			<Representation id="1" mimeType="audio/webm" codecs="opus" bandwidth="124038" audioSamplingRate="48000">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+				<SegmentTemplate timescale="1000" initialization="init-stream$RepresentationID$.webm" media="chunk-stream$RepresentationID$-$Number%05d$.webm" startNumber="1">
+					<SegmentTimeline>
+						<S t="0" d="5001" />
+						<S d="5000" r="16" />
+						<S d="400" />
+					</SegmentTimeline>
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+</MPD>
